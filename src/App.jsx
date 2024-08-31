@@ -34,24 +34,24 @@ function App() {
     };
   });
   
-  function cursorinc(event){
-    gsap.to(cursorref.current,{
-      left: event.clientX,
-      top:event.clientY-85,
-      scale:4,
-      duration:1,
-      ease:"black.out"
-    })
-  }
-  function cursordec(event){
-    gsap.to(cursorref.current,{
-      left: event.clientX,
-      top:event.clientY-85,
-      scale:4,
-      duration:1,
-      ease:"black.out"
-    })
-  }
+  // function cursorinc(event){
+  //   gsap.to(cursorref.current,{
+  //     left: event.clientX,
+  //     top:event.clientY-85,
+  //     scale:4,
+  //     duration:1,
+  //     ease:"black.out"
+  //   })
+  // }
+  // function cursordec(event){
+  //   gsap.to(cursorref.current,{
+  //     left: event.clientX,
+  //     top:event.clientY-85,
+  //     scale:4,
+  //     duration:1,
+  //     ease:"black.out"
+  //   })
+  // }
 
   function hamburgerHandler(){
     setMenuBar(!menuBar);
@@ -67,7 +67,19 @@ function App() {
         duration:1,
         ease:"black.out"
       })
-     }}>
+     }}
+
+     onTouchMove={(event)=>{
+      gsap.to(cursorref.current,{
+        left: event.clientX,
+        top:event.clientY,
+        duration:1,
+        ease:"black.out"
+      })
+     }}
+    
+    
+     >
     <div className='hero-section'>
           <div className='cursor' ref={cursorref}></div>
           <video autoPlay muted loop className="background-video">

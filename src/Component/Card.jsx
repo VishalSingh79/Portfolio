@@ -37,7 +37,8 @@ function Card({name,info,link1,link2,image,cursorref}) {
 
 
   return (
-    <div className='eachproject' onMouseEnter={(event)=>cursorinc(event)}  onMouseLeave={(event)=>cursordec(event)}>
+    <div className='eachproject' onMouseEnter={(event)=>cursorinc(event)}  onMouseLeave={(event)=>cursordec(event)}
+    >
         <img src={image} className='eachimage' />
         <p className='eachname'>{name}</p>
         <p className='eachinfo'>{info}</p>
