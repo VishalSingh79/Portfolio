@@ -1,0 +1,40 @@
+.skills-sec{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+h1{
+    margin: 2.5rem 0rem;
+}
+.skills-details{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+.eachimg{
+   width: 80px;
+   height: 80px;
+}
+.eskills{
+    width: 150px;
+    height: 200px;
+    border: 2px solid #14f7ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.eskills:hover{
+    filter: drop-shadow(0 0 0.55rem #14f7ff);
+    cursor: pointer;
+    scale: 1.05;
+}

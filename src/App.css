@@ -1,0 +1,422 @@
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.cursor{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 3;
+  border: 1.5px solid white;
+  background-color:inherit;
+  pointer-events: none;
+  /* filter: drop-shadow(0 0 0.45rem #14f7ff); */
+  box-shadow: 0 0 0.55rem #14f7ff;
+}
+
+#root{
+  width:100vw;
+  height: 100vh;
+}
+.close-menu{
+  display: none;
+}
+.mobile-menu{
+  display: none;
+}
+
+
+.hii{
+  text-decoration: none;
+  color: white;
+}
+.app {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.logo{
+  font-family: "Dancing Script", cursive;
+  font-size: 26px;
+  animation: slideright 0.8s ease forwards ;
+  opacity: 0;
+}
+.hamburger-menu{
+  display: none;
+ 
+}
+.hamburger-menu1{
+  display: none;
+  
+}
+
+.hero-section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  filter: blur(7px);
+}
+
+.myimage {
+  position: relative;
+  top: 12%;
+  width: 300px;
+  height: 300px; 
+  /* filter: drop-shadow(0 0 0.45rem #14f7ff); */
+  opacity: 0;
+  animation: moveup 1s ease forwards;
+  animation-delay: 0.6s;
+  z-index: -2;
+ 
+}
+.main-nav{
+  padding: 0.3rem;
+  width: 100%;
+  position:relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.886);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.navbar{
+ width:70%; 
+ /* z-index: 1; */
+ z-index: -1;
+ display: flex;
+ justify-content:space-between;
+ align-items: center;
+
+}
+.mid-nav{
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  animation: slideup 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+.hovernav:hover{
+  cursor: pointer;
+}
+.right-nav{
+  padding: 0.8rem;
+  border-radius: 25px;
+  background-color: inherit;
+  font-weight: 300;
+  opacity: 0;
+  animation: slideleft 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+.right-nav:hover{
+  color: black;
+  background-color: rgba(240, 248, 255, 0.959);
+  transition:all 0.4s;
+  cursor: pointer;
+}
+.hero-details{
+  width: fit-content;
+  height: max-content;
+  position: relative;
+  top: -10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: moveleft 1.2s ease forwards;
+  animation-delay: 0.9s;
+}
+.name{
+  font-size: 2rem;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+  text-align: center; 
+  /* font-weight: 800;  */
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+}
+.name1{
+  font-size: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.desc{
+  max-width: 550px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.btns{
+  height: fit-content;
+  margin-top:2rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap:wrap;
+  gap: 30px;
+  
+}
+
+.btn1{
+  border:1px solid blanchedalmond;
+  padding: 1rem;
+  border-radius: 25px;
+  background: linear-gradient(267deg, #DA7C25 0.46%, #B923E1 102.06%);
+  letter-spacing: 0.8px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.btn2{
+  border: 1px solid blanchedalmond;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  /* background: linear-gradient(267deg, #DA7C25 0.46%, #B923E1 102.06%); */
+  background-color: inherit;
+  letter-spacing:0.5px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition:all 0.3s;
+}
+.btn1:hover{
+  cursor: pointer;
+}
+.btn2:hover{
+  cursor: pointer;
+  background-color: blanchedalmond;
+  color: black;
+  
+}
+.name span{
+  background: linear-gradient(270deg, #DF8908 10%, #B418FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+.role{
+  background: linear-gradient(270deg, #DF8908 10%, #B418FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #14f7ff; */
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+ 
+}
+
+@keyframes slideright{
+  0%{
+     transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slideup{
+  0%{
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideleft{
+  0%{
+    transform: translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveup{
+  0%{
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes moveleft{
+  0%{
+    transform: translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media (max-width:420px) {
+  
+    .myimage{
+      position: relative;
+      top: 12%;
+      width: 200px;
+      height: 200px; 
+      opacity: 0;
+      animation: moveup 1s ease forwards;
+      animation-delay: 0.6s;
+      z-index: -2; 
+    
+  }
+  .name{
+    font-size: 1.7rem;
+    text-align: center; 
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+  }
+  .name1{
+    font-size: 1.6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 0.5rem;
+  }
+  .desc{
+    margin-top: 0.2rem;
+    max-width: 550px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+
+}
+@media (max-width:960px) {
+  .mid-nav{
+    display: none;
+  }
+  .right-nav{
+    display: none;
+  }
+  .hamburger-menu, .hamburger-menu1 {
+    display: block;
+    font-size: 2.8rem;
+    z-index: 3;
+
+  }
+  .myimage{
+    position: relative;
+    top: 11%;
+    width: 300px;
+    height: 300px; 
+    opacity: 0;
+    animation: moveup 1s ease forwards;
+    animation-delay: 0.6s;
+    z-index: -2; 
+  
+}
+  .close-navbar {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    right: 1.7rem;
+    z-index: 3;
+    scale: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-navbar {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    right: 2.2rem;
+    z-index: 3;
+    scale: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-menu{
+    width: 100%;
+    position: fixed;
+    top: 3.4rem;
+    height: 15rem;
+    
+    background-color: #1e1c1c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+  }
+  .links1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 0.5rem;
+    z-index: 1000;
+    height: max-content;
+  }
+
+  .hii1{
+    color: #14f7ff;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.1px solid #14f7ff52;
+    background-color: #1e1c1c;
+    letter-spacing: 0.7px;
+  }
+}
+@media (max-width:700px) {
+  .myimage{
+    position: relative;
+    top: 9%;
+    width: 270px;
+    height: 270px; 
+    opacity: 0;
+    animation: moveup 1s ease forwards;
+    animation-delay: 0.6s;
+    z-index: -2; 
+  
+}
+  .name{
+    font-size: 1.6rem;
+  }
+  .name1{
+    font-size: 1.6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 0.5rem;
+  }
+}
+@media (max-width:470px) {
+  .name{
+    font-size: 1.4rem;
+  }
+  .name1{
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 0.5rem;
+  }
+}

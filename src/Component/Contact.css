@@ -1,0 +1,116 @@
+.contact-sec{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+/* .contact-details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0rem;
+    margin-bottom: 3rem;
+} */
+.contact-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 1rem; 
+    margin-bottom: 3rem;
+}
+
+.contact-left{
+    width: 45%;  
+    min-width: 300px;
+    /* text-align: center; */
+}
+.heading{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0.5rem 0rem;
+}
+.icons{
+    display: flex;
+    gap: 0.6rem;
+}
+.contact-right{
+    width: 50%;
+    min-width: 300px;
+    /* display: flex;
+    justify-content: start;
+    align-items: center; */
+}
+.labelh{
+    width: 25rem;
+    height: 2rem;
+    background-color: inherit;
+    border: 1px solid #14f7ff;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    letter-spacing: 0.7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+.textlabel{
+    width: 25rem;
+    height: 5rem;
+    background-color: inherit;
+    border-radius: 5px;
+    border: 1px solid #14f7ff;
+    padding: 0.4rem 0.6rem;
+    letter-spacing: 0.7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+.submitlabel{
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.8px;
+    font-size: medium;
+    background-color: inherit;
+    border: 1px solid #14f7ff;
+    background-color: #26f5fc71;
+    transition: all 0.6s ease ;
+}
+.submitlabel:hover{
+    cursor: pointer;
+    background-color: #26f5fc;
+    color: black;
+    font-weight: 400;
+    filter: drop-shadow(0 0 0.45rem #14f7ff);
+}
+
+
+@media (max-width:400px) {
+    .heading{
+        text-align: center;
+    }
+    .labelh{
+        width: 19rem;     
+    }
+    .textlabel{
+        width: 19rem;
+    }
+}
+@media (max-width:960px) {
+    .heading{
+        text-align: center;
+    }
+    .cdesc{
+        text-align: center;
+    }
+}
