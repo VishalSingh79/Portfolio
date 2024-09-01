@@ -96,4 +96,7 @@
         justify-content:center;
         
     }
+    .right-desc{
+        padding: 0rem 0.7rem;
+    }
 }
