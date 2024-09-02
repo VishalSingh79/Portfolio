@@ -1,3 +1,25 @@
+:root {
+  --button-text-color-light: white;
+  --button-text-color-dark: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --button-text-color: var(--button-text-color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --button-text-color: var(--button-text-color-light);
+  }
+}
+
+.btn2{
+  color: var(--button-text-color);
+}
+
+
 body, html {
   height: 100vh;
   width: 100vw;
