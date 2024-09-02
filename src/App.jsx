@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Project from './Component/Projects';
 import clip from './assets/clip.mp4';
+import myimage1 from './assets/myimage1.png'
+import myimage2 from './assets/myimage2.png';
 import photo from './assets/myphoto.png';
 import { useEffect,useRef,useState } from 'react';
 import Typed from 'typed.js';
@@ -110,7 +112,7 @@ function App() {
          
           </div>
           
-          <img src={photo} className='myimage' />
+          <img src={myimage2} className='myimage' />
           <div className='hero-details'>
             <div  
              className='name'
