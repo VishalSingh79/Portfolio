@@ -8,7 +8,7 @@ import Card from './Card';
 import gsap from 'gsap';
 
 
-function Projects({cursorref}) {
+function Projects({cursorref,setCursorText,setIsHovered}) {
 
   // const cursorRef=useRef(null);
 
@@ -76,7 +76,7 @@ function Projects({cursorref}) {
             {
                 data.map((eachdata)=>{
                       return (
-                        <Card key={eachdata.id} {...eachdata} cursorref={cursorref}/>
+                        <Card key={eachdata.id} {...eachdata} cursorref={cursorref} setCursorText={setCursorText} setIsHovered={setIsHovered}/>
                       )
                  })
              }

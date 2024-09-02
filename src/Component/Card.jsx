@@ -3,34 +3,47 @@ import './Projects.css';
 import gsap from 'gsap';
 
 
-function Card({name,info,link1,link2,image,cursorref}) {
- console.log(cursorref);
+function Card({name,info,link1,link2,image,cursorref,setCursorText,setIsHovered}) {
+ 
   function cursorinc(event){
+    
+    setCursorText("VIEW PROJECT");
+    
+    setIsHovered(true);
     gsap.to(cursorref.current,{
       left: event.clientX,
       top:event.clientY-85,
-      scale:3,
+      scale:1,
       duration:0.5,
-      ease:"black.out"
+      ease:"black.out",
+      overwrite: true,
     })
   }
   function cursordec(event){
+ 
+    setIsHovered(false);
+    setCursorText("");
+ 
     gsap.to(cursorref.current,{
       left: event.clientX,
       top:event.clientY,
       scale:1,
       duration:0.6,
-      ease:"black.out"
+      ease:"black.out",
+      overwrite: true,
     })
   }
 
   function cursordec1(event){
+    setIsHovered(false);
+    setCursorText("");
     gsap.to(cursorref.current,{
       left: event.clientX,
       top:event.clientY,
       scale:0.3,
-      duration:0.6,
-      ease:"black.out"
+      duration:0.4,
+      ease:"black.out",
+      overwrite: true,
     })
   }
 

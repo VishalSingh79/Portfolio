@@ -3,11 +3,38 @@ import "./Contact.css"
 import { toast } from 'react-toastify';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import gsap from 'gsap';
 
-
-function Contact() {
+function Contact({cursorref}) {
   const form = useRef();
   
+  function cursordec(event){
+ 
+    gsap.to(cursorref.current,{
+      left: event.clientX,
+      top:event.clientY,
+      scale:1,
+      duration:0.4,
+      ease:"black.out",
+      overwrite: true,
+    })
+  }
+
+  function cursordec1(event){
+  
+    gsap.to(cursorref.current,{
+      left: event.clientX,
+      top:event.clientY,
+      scale:0.3,
+      duration:0.4,
+      ease:"black.out",
+      overwrite: true,
+    })
+  }
+    
+  
+
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -37,7 +64,7 @@ function Contact() {
 
 
   return (
-    <div className='contact-sec' id='contactsec'>
+    <div className='contact-sec' id='contactsec' >
     <div className='contact-info'>
       <h1>Get in <span style={{color:"#14f7ff"}}>touch</span></h1>
       <div className='contact-details'>
@@ -53,17 +80,17 @@ function Contact() {
               <form action='' ref={form} onSubmit={sendEmail}>
                   <label htmlFor='name'>Name:</label>
                   <br/>
-                  <input type='text' id='name' name='name' className='labelh'/>
+                  <input type='text' id='name' name='name' className='labelh' onMouseEnter={(event)=>cursordec1(event)} onMouseLeave={(event)=>cursordec(event)}/>
                   <br/>
                   <br/>
                   <label htmlFor='email'>Email:</label>
                   <br/>
-                  <input type='email' id='email' name='email' className='labelh'/>
+                  <input type='email' id='email' name='email' className='labelh' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}/>
                   <br/>
                   <br/>
                   <label htmlFor='message'>Message:</label>
                   <br/>
-                  <textarea type='text' id='message' name='message' className='textlabel'/>
+                  <textarea type='text' id='message' name='message' className='textlabel' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}/>
                   <br/>
                   <br/>
                   <button className='submitlabel'>Submit</button>
