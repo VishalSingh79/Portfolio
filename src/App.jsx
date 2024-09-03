@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import Project from './Component/Projects';
+import Footer from './Component/Footer';
 import clip from './assets/clip.mp4';
-import myimage1 from './assets/myimage1.png'
-import myimage2 from './assets/myimage2.png';
-import photo from './assets/myphoto.png';
+import myimage from './assets/myimage.png'
 import { useEffect,useRef,useState } from 'react';
 import Typed from 'typed.js';
 import Aboutme from './Component/Aboutme';
@@ -66,7 +65,7 @@ function App() {
     
     
      >
-    <div className='hero-section'>
+    <div className='hero-section' id='hero'>
           <div className={`${isHovered ? 'hovered' : 'cursor'}`}  ref={cursorref}><div className='hovereffect'>{cursorText}</div></div>
           <video autoPlay muted loop className="background-video">
             <source src={clip} type="video/mp4" />   
@@ -74,7 +73,7 @@ function App() {
           <div className='main-nav'>
           <div className='navbar' >
           <div className='logo' >
-              Vishal <span style={{color:"#14f7ff"}}>Singh</span>
+              <a href='#hero' className='hii'>Vishal <span style={{color:"#14f7ff"}}>Singh</span></a>
           </div>
           
           <div className='mid-nav'>
@@ -112,7 +111,7 @@ function App() {
          
           </div>
           
-          <img src={myimage2} className='myimage' />
+          <img src={myimage} className='myimage' />
           <div className='hero-details'>
             <div  
              className='name'
@@ -125,10 +124,11 @@ function App() {
             </div>
           </div>
     </div>
-    <Aboutme/>
+    <Aboutme/> 
     <Project cursorref={cursorref} setCursorText={setCursorText} setIsHovered={setIsHovered}/>  
     <Skills/>
     <Contact cursorref={cursorref}/>
+    <Footer/>  
     
     </div>
   );

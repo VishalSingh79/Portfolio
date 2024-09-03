@@ -46,24 +46,6 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       link2:"https://github.com/VishalSingh79/Birth-Date-Predictor.git",
     }
   ]
-  // function cursorinc(event){
-  //   gsap.to(cursorref.current,{
-  //     left: event.clientX,
-  //     top:event.clientY-85,
-  //     scale:4,
-  //     duration:1,
-  //     ease:"black.out"
-  //   })
-  // }
-  // function cursordec(event){
-  //   gsap.to(cursorref.current,{
-  //     left: event.clientX,
-  //     top:event.clientY-85,
-  //     scale:4,
-  //     duration:1,
-  //     ease:"black.out"
-  //   })
-  // }
 
 
   return (

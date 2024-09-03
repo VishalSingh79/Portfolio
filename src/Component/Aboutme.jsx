@@ -2,13 +2,15 @@ import React from 'react'
 import './Aboutme.css';
 import photo from '../assets/myphoto.png';
 import github from '../assets/bxl-github.svg';
+import myphoto from '../assets/myphoto2.png'
+
 function Aboutme() {
   return (
     <div className='aboutsec' id='about-sec'>
         <h1>About <span style={{color:"#14f7ff"}}>me</span></h1>
         <div className='aboutsec-details'>
             <div className='left-about'>
-                <img src={photo} className='aboutphoto'/>
+                <img src={myphoto} className='aboutphoto'/>
             </div>
             <div className='right-about'>
                  <p className='right-desc'> I am a innovative Front-end Engineer with a strong background in designing, developing, testing, and deploying high quality software solutions. I began my journey into technology with a very good foundation in languages like C, C++, and Python. I thrive on solving complex problems and continuously learning about the latest industry trends to deliver cutting-edge solutions.</p> 

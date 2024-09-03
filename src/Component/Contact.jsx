@@ -1,13 +1,15 @@
 import React from 'react'
 import "./Contact.css"
+
 import { toast } from 'react-toastify';
+import {useForm} from 'react-hook-form';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import gsap from 'gsap';
 
 function Contact({cursorref}) {
   const form = useRef();
-  
+  const { register, formState: { errors }, handleSubmit } = useForm();
   function cursordec(event){
  
     gsap.to(cursorref.current,{
@@ -32,12 +34,15 @@ function Contact({cursorref}) {
     })
   }
     
-  
+  const onSubmit=(data)=>{
+    toast.info("Sending your message...", {
+      autoClose: 900, 
+    });    
+      sendEmail(data);
+  }
 
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  const sendEmail = (data) => {
+   
     emailjs
       .sendForm('service_m5mbkyq', 'template_mynulfv', form.current, {
         publicKey: 'rzm2-l5V9nWBmLH5H',
@@ -77,22 +82,28 @@ function Contact({cursorref}) {
         </div>
         <div className='contact-right'>
            <div >
-              <form action='' ref={form} onSubmit={sendEmail}>
+          
+              <form action='' ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <label htmlFor='name'>Name:</label>
                   <br/>
-                  <input type='text' id='name' name='name' className='labelh' onMouseEnter={(event)=>cursordec1(event)} onMouseLeave={(event)=>cursordec(event)}/>
-                  <br/>
-                  <br/>
+                  <input type='text' id='name' name='name' className='labelh'   onMouseEnter={(event)=>cursordec1(event)} onMouseLeave={(event)=>cursordec(event)}
+                     {...register('name', { required: "Name is required**" })}
+                  />
+                  <p style={{color:'red',backgroundColor:'inherit'}}>{errors.name?.message}</p>
+                  
                   <label htmlFor='email'>Email:</label>
                   <br/>
-                  <input type='email' id='email' name='email' className='labelh' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}/>
-                  <br/>
-                  <br/>
+                  <input type='email' id='email' name='email' className='labelh' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}
+                      {...register('email', { required: "Email is required**" })}
+                  />
+                   <p style={{color:'red',backgroundColor:'inherit'}}>{errors.email?.message}</p>
+                 
                   <label htmlFor='message'>Message:</label>
                   <br/>
-                  <textarea type='text' id='message' name='message' className='textlabel' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}/>
-                  <br/>
-                  <br/>
+                  <textarea type='text' id='message' name='message' className='textlabel' onMouseEnter={(event)=>cursordec1(event)}  onMouseLeave={(event)=>cursordec(event)}
+                    {...register('message', { required: "Message is required**" })}
+                  />
+                   <p style={{color:'red',backgroundColor:'inherit'}}>{errors.message?.message}</p>
                   <button className='submitlabel'>Submit</button>
               </form>
            </div>

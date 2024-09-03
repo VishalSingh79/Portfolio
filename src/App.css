@@ -71,7 +71,9 @@ body, html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
   overflow-x: hidden;
+  /* overflow-y: auto; */
 }
 .cursor{
   width: 16px;
@@ -111,6 +113,7 @@ body, html {
   width: 100%;
 }
 .logo{
+  text-decoration: none;
   font-family: "Dancing Script", cursive;
   font-size: 26px;
   animation: slideright 0.8s ease forwards ;
@@ -133,43 +136,51 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content:space-between;
+ 
 }
 
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: -3;
   filter: blur(5px);
+  overflow: hidden;
+  box-sizing: border-box;
+
 }
 
-.myimage {
+.myimage{
   position: relative;
-  top: 12.8%;
+  top: 14%;
   width: 265x;
   height: 265px; 
   opacity: 0;
   animation: moveup 1s ease forwards;
   animation-delay: 0.6s;
-  z-index: -2;
+  /* z-index: -2; */
   filter: drop-shadow(0 0 0.65rem rgba(20, 247, 255, 0.8));
- 
+  transition: all 0.6s ease;
 }
-
+.myimage:hover{
+  cursor: pointer;
+  scale: 1.04;
+}
 .main-nav{
-  padding: 0.3rem;
+  padding: 0.3rem 0rem;
   width: 100%;
-  position:relative; 
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position:fixed;
   background-color: rgba(0, 0, 0, 0.957);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.571);
   z-index: 1;
+  overflow-x: hidden;
+ 
 }
 .navbar{
  width:70%; 
@@ -188,6 +199,7 @@ body, html {
   opacity: 0;
   animation: slideup 0.8s ease forwards;
   animation-delay: 0.2s;
+ 
 }
 .hovernav:hover{
   cursor: pointer;
@@ -222,9 +234,7 @@ body, html {
 }
 .name{
   font-size: 2rem;
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
   text-align: center; 
-  /* font-weight: 800;  */
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   
@@ -264,7 +274,7 @@ body, html {
   border: 1px solid blanchedalmond;
   padding: 1rem 1.5rem;
   border-radius: 25px;
-  /* background: linear-gradient(267deg, #DA7C25 0.46%, #B923E1 102.06%); */
+ 
   background-color: inherit;
   letter-spacing:0.5px;
   font-size: medium;
@@ -292,7 +302,6 @@ body, html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* color: #14f7ff; */
   text-align: center;
   font-family: "Archivo Black", sans-serif;
  
@@ -343,7 +352,7 @@ body, html {
     transform: translateX(0px);
   }
 }
-@media (max-width:420px) {
+@media (max-width:440px) {
   
     .myimage{
       position: relative;
@@ -377,10 +386,10 @@ body, html {
   }
 
 }
-@media (max-width:1040px) {
+@media (max-width:1170px) {
   .myimage{
     position: relative;
-    top: 11.5%;
+    top: 11.7%;
     width: 250px;
     height: 250px; 
     opacity: 0;
@@ -404,7 +413,7 @@ body, html {
   }
   .myimage{
     position: relative;
-    top: 11%;
+    top: 10%;
     width: 250px;
     height: 250px; 
     opacity: 0;
@@ -475,7 +484,7 @@ body, html {
 @media (max-width:700px) {
   .myimage{
     position: relative;
-    top: 9%;
+    top: 11.5%;
     width: 235px;
     height: 235px; 
     opacity: 0;
