@@ -450,7 +450,7 @@ body, html {
     position: fixed;
     top: 3.2rem;
     height: 15rem;
-    
+    z-index: 1;
     background-color: #1e1c1c;
     color: #fff;
     display: flex;
@@ -467,7 +467,7 @@ body, html {
     width: 100%;
     align-items: center;
     row-gap: 0.5rem;
-    z-index: 1000;
+    z-index: 1;
     height: max-content;
   }
 
@@ -479,6 +479,7 @@ body, html {
     border-bottom: 0.1px solid #14f7ff52;
     background-color: #1e1c1c;
     letter-spacing: 0.7px;
+    z-index: 1;
   }
 }
 @media (max-width:700px) {

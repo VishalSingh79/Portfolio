@@ -1,3 +1,29 @@
+:root {
+    --button-text-color-light: white;
+    --button-text-color-dark: white;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --button-text-color: var(--button-text-color-dark);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --button-text-color: var(--button-text-color-light);
+    }
+  }
+  
+.labelh{
+    color: var(--button-text-color);
+    caret-color: var(--button-text-color);
+  }
+.textlabel{
+    color: var(--button-text-color);
+    caret-color: var(--button-text-color);
+  }
+
 .contact-sec{
     background-color: black;
     width: 100%;
@@ -13,15 +39,7 @@
     flex-direction: column;
     gap: 2rem;
 }
-/* .contact-details{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0rem;
-    margin-bottom: 3rem;
-} */
+
 .contact-details {
     width: 100%;
     display: flex;
@@ -35,7 +53,7 @@
 .contact-left{
     width: 45%;  
     min-width: 300px;
-    /* text-align: center; */
+   
 }
 .heading{
     font-size: 30px;
@@ -49,9 +67,7 @@
 .contact-right{
     width: 50%;
     min-width: 300px;
-    /* display: flex;
-    justify-content: start;
-    align-items: center; */
+ 
 }
 .labelh{
     width: 25rem;
