@@ -1,8 +1,6 @@
 import React from 'react'
 import './Aboutme.css';
-import photo from '../assets/myphoto.png';
-import github from '../assets/bxl-github.svg';
-import myphoto from '../assets/myphoto2.png'
+import myphoto from "../assets/me2.webp";
 
 function Aboutme() {
   return (

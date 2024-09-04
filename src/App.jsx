@@ -3,7 +3,7 @@ import './App.css';
 import Project from './Component/Projects';
 import Footer from './Component/Footer';
 import clip from './assets/clip.mp4';
-import myimage from './assets/myimage.png'
+import myimage from "./assets/me1.webp"
 import { useEffect,useRef,useState } from 'react';
 import Typed from 'typed.js';
 import Aboutme from './Component/Aboutme';
@@ -68,7 +68,7 @@ function App() {
     <div className='hero-section' id='hero'>
           <div className={`${isHovered ? 'hovered' : 'cursor'}`}  ref={cursorref}><div className='hovereffect'>{cursorText}</div></div>
           <video autoPlay muted loop className="background-video">
-            <source src={clip} type="video/mp4" />   
+            <source src={clip} type="video/mp4" loading="lazy"/>   
           </video>
           <div className='main-nav'>
           <div className='navbar' >
