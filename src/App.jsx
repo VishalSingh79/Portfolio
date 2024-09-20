@@ -82,7 +82,7 @@ function App() {
             <a href='#skillsec' className='hii'><p className='hovernav'>Skills</p></a>
             <a href='#contactsec' className='hii'><p className='hovernav'>Contact me</p></a>
           </div>
-          <a href='/resume.pdf' download>
+          <a href='/Vishal_Singh_Software__Developer.pdf' download>
           <button className='right-nav'>
             Download Resume
           </button> 
