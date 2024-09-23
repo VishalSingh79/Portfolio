@@ -1,4 +1,4 @@
-import React,{useRef} from 'react'
+import React,{useRef,useEffect} from 'react'
 import './Projects.css'
 import currencysnap from '../assets/Currencysnap.png';
 import todosnap from '../assets/todosnap.png';
@@ -11,7 +11,7 @@ import gsap from 'gsap';
 function Projects({cursorref,setCursorText,setIsHovered}) {
 
   // const cursorRef=useRef(null);
-
+  
   const data = [
     {
       id: 1,

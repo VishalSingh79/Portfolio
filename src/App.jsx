@@ -37,7 +37,6 @@ function App() {
     };
   });
   
-
   function hamburgerHandler(){
     setMenuBar(!menuBar);
     
