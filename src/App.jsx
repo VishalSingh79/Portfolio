@@ -12,7 +12,7 @@ import Contact from './Component/Contact';
 import gsap from 'gsap';
 import { IoReorderThree } from "react-icons/io5";
 import { GiSplitCross } from "react-icons/gi";
-
+import { RxCross2 } from "react-icons/rx";
 
 function App() {
   const cursorref=useRef(null);
@@ -24,7 +24,7 @@ function App() {
     const typeData = new Typed(".role", {
       strings: [
         "Student",
-        "Frontend Developer",
+        "Full Stack Developer",
         "Coder",
       ],
       loop: true,
@@ -60,11 +60,9 @@ function App() {
         duration:1,
         ease:"black.out"
       })
-     }}
-    
-    
+     }}  
      >
-    <div className='hero-section' id='hero'>
+    <div className='hero-section' id='hero' onMouseMove={(e) => handleMouseMove(e)}>
           <div className={`${isHovered ? 'hovered' : 'cursor'}`}  ref={cursorref}><div className='hovereffect'>{cursorText}</div></div>
           <video autoPlay muted loop className="background-video">
             <source src={clip} type="video/mp4" loading="lazy"/>   
@@ -88,11 +86,11 @@ function App() {
           </a>
           
           </div>
-          <div  className={menuBar?"mobile-navbar":"close-navbar"} onClick={hamburgerHandler}>
+          <div  className={"mobile-navbar"} onClick={hamburgerHandler}>
             { menuBar? 
-              <GiSplitCross className='hamburger-menu' style={{fontSize:"2.8rem"}}/>
+              <RxCross2  className='hamburger-menu'style={{fontSize:"2.5rem"}}/>
                :
-              <IoReorderThree className='hamburger-menu1'/>
+              <IoReorderThree className='hamburger-menu1'style={{fontSize:"2.5rem"}}/>
             }
             </div>
             <div className={menuBar?"mobile-menu":"close-menu"}>
@@ -111,7 +109,7 @@ function App() {
           </div>
           
           <img src={myimage} className='myimage' />
-          <div className='hero-details'>
+          <div className='hero-details' >
             <div  
              className='name'
             >Hello! Everyone 👋 <span>I'm Vishal Singh</span></div>

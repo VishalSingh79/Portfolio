@@ -81,9 +81,9 @@ function Contact({cursorref}) {
             <p className='icons'><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA0FJREFUSEuVVzFCGzEQnLkGfhHzinRgfyMpAhUPIL1NTx6QylDAN3ykyytwfhGam3h1qzvpdMLOVSAkze7s7KwgAQj9l/7sS5P12o5095HL/Ea76ZSdQ1T/Af1BMgxJHvlKKEkLANd+8JHk/tgteeQnAZeESFoC2PlfViTbEN7JdGTA9ouO1tvA1GkJ5sDzGdcjKamuhc4AGCn+BmBhoiRgNLcAnizz45SPQq7v9SA6dQv21Bpw/jm6L1oQRv3RmnOeDF8NWXYbgWuWAE8APvXBaCnEumkP0LLf5BGOd5oYPlS1Om0OhV8nF9w35Cb2fVxPVJ7tLcHz5p2lOihX2HloRt3NoN6KX3R9m8WSDGfmACriAjppR8Daxr4VG7YmeUlfINyC+Ox/+w3gZ0O+GBNStwD4FtqD2pPNxWnA4bDMHLZ+4D5SJukBwF1/aXpdWPhB8rutdtLmII9Ie+jzYbcLNrPM2MeSDDQ4Ew+ooXctU+C5wMzT+UryxSgn8DYNPN06AJtABNgBg9kCtHq1JFcO/ArockzVzKZQ5y+SV2F/J9OHlSrUOrYbG+6DqmM7STL5p6q0vY9kc2PzS9JfAGezSvQJR+GdDc/tzi5hbVA/ELqiZ9IPTYF7baBl06xGYJ1NijuN453kuTO0BXQ9YWXQS0Z14kxrAUuzQ5IXnsErgMtaxr4eqPb9VuNoq6FcRnt0tVkDsewPnbOOwKO49Hwk4yAu3x99xsZmqHE6BmrA6dhL2ql7EHgXD00U7u1EdOo2FNZWK4CDB4ScE+fM2fMpJGDrBtI7UGogwC2QG0iSaRp0KFUESOdC1avdf2Mv+tRp9uMLray2nzEPGByvIdue83wc9aquzOuJgxl4OXX8AqmbtmMoUW36lWMx2Tk3dWTK7E2mBfjnMBSubCyGjLwHD1066GLkJSe6Mo9zGoMFhkll0ycCzDSWsAf7KXak7VKrTwe1HyuzNxu1+o1Z9pb4dOj71up5yus8VrweXL32xSszvWSq3unDYR64ACuZ6F+Z2gU7lM3qpi1eqMWxSY1HpU/knvxrM+2G8kH/cZtllMaAKmxW6K/tzt/khZJnjlUNpKhZHXM0gpkyjSXw4HzPPzU0oDiOmuLnAAAAAElFTkSuQmCC"/></span> Kanpur,Uttar Pradesh</p>
         </div>
         <div className='contact-right'>
-           <div >
+           <div>
           
-              <form action='' ref={form} onSubmit={handleSubmit(onSubmit)}>
+              <form action='' ref={form} onSubmit={handleSubmit(onSubmit)} className='contact-form'>
                   <label htmlFor='name'>Name:</label>
                   <br/>
                   <input type='text' id='name' name='name' className='labelh'   onMouseEnter={(event)=>cursordec1(event)} onMouseLeave={(event)=>cursordec(event)}

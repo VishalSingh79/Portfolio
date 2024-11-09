@@ -9,7 +9,9 @@ import Tailwind from '../assets/Tailwind.png';
 import css from '../assets/CSS.png';
 import cc from '../assets/c++.svg';
 import github from '../assets/Github.svg';
-
+import nodejs from "../assets/NodeJs.svg";
+import mongoDB from "../assets/MongoDB.svg";
+import express from "../assets/Express.png";
 
 
 
@@ -53,6 +55,18 @@ function Skills() {
              <div className='eskills'>
               <p><img src={github} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
               <p>Github</p>
+             </div>
+             <div className='eskills'>
+              <p><img src={nodejs} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
+              <p>NodeJs</p>
+             </div>
+             <div className='eskills'>
+              <p><img src={mongoDB} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
+              <p>MongoDB</p>
+             </div>
+             <div className='eskills'>
+              <p><img src={express} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
+              <p>ExpressJs</p>
              </div>
       </div>
       

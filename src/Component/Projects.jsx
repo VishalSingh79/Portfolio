@@ -4,6 +4,7 @@ import currencysnap from '../assets/Currencysnap.png';
 import todosnap from '../assets/todosnap.png';
 import weathersnap from '../assets/weathersnap.png';
 import birthsnap from '../assets/birthsnap.png';
+import notionacademy from '../assets/NotionHome.webp';
 import Card from './Card';
 import gsap from 'gsap';
 
@@ -13,6 +14,14 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
   // const cursorRef=useRef(null);
   
   const data = [
+    {
+      id: 0,
+      name: "Notion Academy",
+      info: "Notion Academy—a MERN-powered platform where Admins manage, Instructors create courses, and Students learn through engaging courses, secure payments.",
+      image: notionacademy,
+      link1:"https://notion-academy.vercel.app",
+      link2:"https://github.com/VishalSingh79"
+    },
     {
       id: 1,
       name: "Weather App",
@@ -32,7 +41,7 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
     {
       id: 3,
       name: "Currency Convertor",
-      info: "Developed a responsive web application using React.js for real-time currency conversion across 50+ global currencies. Leveraged external APIs to provide accurate exchange rates, enhancing user experience and boosting mobile usage by 15%.",
+      info: "Developed a responsive web application using React.js for real-time currency conversion across 50+ global currencies. Leveraged external APIs to provide accurate exchange rates.",
       image: currencysnap,
       link1:"https://vishalsingh79.github.io/Currency-Convertor",
       link2:"https://github.com/VishalSingh79/Currency-Convertor.git",

@@ -1,6 +1,7 @@
 :root {
   --button-text-color-light: white;
   --button-text-color-dark: white;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +15,11 @@
     --button-text-color: var(--button-text-color-light);
   }
 }
-
+body {
+  overflow: -moz-scrollbars-none;  
+  -ms-overflow-style: none;
+  scrollbar-width: none;          
+}
 .btn2{
   color: var(--button-text-color);
 }
@@ -176,7 +181,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.957);
+  background-color: rgba(0, 0, 0, 0.977);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.571);
   z-index: 1;
   overflow-x: hidden;
@@ -194,6 +199,8 @@ body, html {
 .mid-nav{
   width: 400px;
   display: flex;
+  letter-spacing: 0.6px;
+  font-size: 16.5px;
   justify-content: space-evenly;
   align-items: center;
   opacity: 0;
@@ -399,6 +406,10 @@ body, html {
   }
 }
 @media (max-width:960px) {
+  .main-nav{
+    justify-content: space-between;
+    
+  }
   .mid-nav{
     display: none;
   }
@@ -407,9 +418,8 @@ body, html {
   }
   .hamburger-menu, .hamburger-menu1 {
     display: block;
-    font-size: 2.8rem;
+    /* font-size: 2.5rem; */
     z-index: 3;
-
   }
   .myimage{
     position: relative;
@@ -425,8 +435,8 @@ body, html {
   .close-navbar {
     width: 3rem;
     height: 3rem;
-    position: fixed;
-    right: 1.7rem;
+    /* position: fixed; */
+    /* right: 1.7rem; */
     z-index: 3;
     scale: 1;
     display: flex;
@@ -436,8 +446,8 @@ body, html {
   .mobile-navbar {
     width: 2rem;
     height: 2rem;
-    position: fixed;
-    right: 2.2rem;
+    height: 100%;
+    width: 40px; 
     z-index: 3;
     scale: 1;
     display: flex;
@@ -448,7 +458,7 @@ body, html {
   .mobile-menu{
     width: 100%;
     position: fixed;
-    top: 3.2rem;
+    top: 3.3rem;
     height: 15rem;
     z-index: 1;
     background-color: #1e1c1c;
@@ -511,5 +521,32 @@ body, html {
     font-size: 1.4rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 0.5rem;
+  }
+}
+@media (max-width:330px){
+  .hero-section{
+    height: max-content;
+  }
+  .hero-details{
+    width: fit-content;
+    height: max-content;
+    position: relative;
+    top: 4.5rem;
+    
+  }
+  .btn2{
+    scale: 0;
+  }
+  .myimage{
+    top: 3.5rem;
+  }
+  .name{
+    font-size: 18px;
+  }
+  .name1{
+    font-size: medium;
+  }
+  .desc{
+    font-size: medium;
   }
 }

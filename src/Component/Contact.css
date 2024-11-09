@@ -112,14 +112,18 @@
 
 
 @media (max-width:400px) {
+    .contact-form{
+        position: inherit;
+        max-width: 100%;
+    } 
     .heading{
         text-align: center;
     }
     .labelh{
-        width: 19rem;     
+        width:90%;    
     }
     .textlabel{
-        width: 19rem;
+        width: 90%;
     }
 }
 @media (max-width:960px) {

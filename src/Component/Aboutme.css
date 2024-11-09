@@ -50,6 +50,14 @@
     gap: 0.3rem;
     
 }
+
+.right-desc{
+    letter-spacing: 0.5px;
+    font-family: 'Trebuchet MS';
+    font-size: large;
+}
+
+
 .links{ 
     margin-top: 15px;
     width:100%;
@@ -57,7 +65,7 @@
     display: flex;
     justify-content:start;
     align-items: center;
-    gap: 10px;
+    gap: 17px;
 }
 
 .link{
@@ -86,10 +94,11 @@
 }
 
 @media (max-width:400px) {
+    
     .right-about{
         display: flex;
         text-align: center;
-        
+      
     }
     .links{ 
        
@@ -97,6 +106,8 @@
         
     }
     .right-desc{
-        padding: 0rem 0.7rem;
+        padding: 0rem 0.7rem;       
+        width: 100vw;
+        font-size: medium;
     }
 }
