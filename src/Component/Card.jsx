@@ -9,7 +9,7 @@ function Card({name,info,link1,link2,image,cursorref,setCursorText,setIsHovered}
     
     setCursorText("VIEW PROJECT");
     
-    setIsHovered(true);
+    setIsHovered(1);
     gsap.to(cursorref.current,{
       left: event.clientX,
       top:event.clientY-85,
@@ -21,7 +21,7 @@ function Card({name,info,link1,link2,image,cursorref,setCursorText,setIsHovered}
   }
   function cursordec(event){
  
-    setIsHovered(false);
+    setIsHovered(0);
     setCursorText("");
  
     gsap.to(cursorref.current,{
@@ -35,7 +35,7 @@ function Card({name,info,link1,link2,image,cursorref,setCursorText,setIsHovered}
   }
 
   function cursordec1(event){
-    setIsHovered(false);
+    setIsHovered(0);
     setCursorText("");
     gsap.to(cursorref.current,{
       left: event.clientX,

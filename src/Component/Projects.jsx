@@ -10,8 +10,6 @@ import gsap from 'gsap';
 
 
 function Projects({cursorref,setCursorText,setIsHovered}) {
-
-  // const cursorRef=useRef(null);
   
   const data = [
     {
@@ -20,7 +18,7 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       info: "Notion Academy—a MERN-powered platform where Admins manage, Instructors create courses, and Students learn through engaging courses, secure payments.",
       image: notionacademy,
       link1:"https://notion-academy.vercel.app",
-      link2:"https://github.com/VishalSingh79"
+      link2:"https://github.com/VishalSingh79/Notion-Academy.git"
     },
     {
       id: 1,

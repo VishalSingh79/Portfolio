@@ -12,62 +12,85 @@ import github from '../assets/Github.svg';
 import nodejs from "../assets/NodeJs.svg";
 import mongoDB from "../assets/MongoDB.svg";
 import express from "../assets/Express.png";
-
+import SkillCard from './SkillCard';
 
 
 function Skills() {
+
+  const skillsset = [
+    {
+      id: 1,
+      name: "HTML",
+      image: html,
+    },
+    {
+      id: 2,
+      name: "CSS",
+      image: css,
+    },
+    {
+      id: 3,
+      name: "Javascript",
+      image: javascript,
+    },
+    {
+      id: 4,
+      name: "React.js",
+      image: react,
+    },
+    {
+      id: 5,
+      name: "Tailwind CSS",
+      image: Tailwind,
+    },
+    {
+      id: 6,
+      name: "Redux",
+      image: redux,
+    },
+    {
+      id: 7,
+      name: "Python",
+      image: python,
+    },
+    {
+      id: 8,
+      name: "C++",
+      image: cc,
+    },
+    {
+      id: 9,
+      name: "Github",
+      image: github,
+    },
+    {
+      id: 10,
+      name: "Node.js",
+      image: nodejs,
+    },
+    {
+      id: 11,
+      name: "MongoDB",
+      image: mongoDB,
+    },
+    {
+      id: 12,
+      name: "Express.js",
+      image: express,
+    },
+  ]
+
+
+
   return (
     <div className='skills-sec' id='skillsec'>
           <h1>My <span style={{color:"#14f7ff"}}>Skills</span></h1>
       <div className='skills-details'>
-             <div className='eskills'>
-              <p ><img src={html} className='eachimg'/></p>       
-              <p>HTML</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={css} className='eachimg'/></p>
-              <p>CSS</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={javascript} className='eachimg'/></p>
-              <p>Javascript</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={react} className='eachimg'/></p>
-              <p>React.js</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={Tailwind} className='eachimg'/></p>
-              <p>Tailwind CSS</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={redux} className='eachimg'/></p>
-              <p>Redux</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={python} className='eachimg'/></p>
-              <p>Python</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={cc} className='eachimg'/></p>
-              <p>C++</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={github} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
-              <p>Github</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={nodejs} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
-              <p>NodeJs</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={mongoDB} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
-              <p>MongoDB</p>
-             </div>
-             <div className='eskills'>
-              <p><img src={express} className='eachimg' style={{backgroundColor:"white", borderRadius:"55%"}}/></p>
-              <p>ExpressJs</p>
-             </div>
+         {
+          skillsset.map((skill) => (
+           <SkillCard key={skill.id} text={skill.name} img={skill.image} />
+          ))
+         }
       </div>
       
     </div>

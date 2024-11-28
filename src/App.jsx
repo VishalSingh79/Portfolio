@@ -11,13 +11,12 @@ import Skills from './Component/Skills';
 import Contact from './Component/Contact';
 import gsap from 'gsap';
 import { IoReorderThree } from "react-icons/io5";
-import { GiSplitCross } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
 function App() {
   const cursorref=useRef(null);
   const [cursorText, setCursorText] = useState('');
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(0);
   const [menuBar,setMenuBar]=useState(false);
   useEffect(() => {
   
@@ -37,6 +36,7 @@ function App() {
     };
   });
   
+
   function hamburgerHandler(){
     setMenuBar(!menuBar);
     
@@ -63,7 +63,7 @@ function App() {
      }}  
      >
     <div className='hero-section' id='hero' onMouseMove={(e) => handleMouseMove(e)}>
-          <div className={`${isHovered ? 'hovered' : 'cursor'}`}  ref={cursorref}><div className='hovereffect'>{cursorText}</div></div>
+          <div className={`${isHovered == 2 ? 'hovered2' : isHovered==1 ? 'hovered' : 'cursor'}`}  ref={cursorref}><div className='hovereffect'>{cursorText}</div></div>
           <video autoPlay muted loop className="background-video">
             <source src={clip} type="video/mp4" loading="lazy"/>   
           </video>
@@ -79,7 +79,7 @@ function App() {
             <a href='#skillsec' className='hii'><p className='hovernav'>Skills</p></a>
             <a href='#contactsec' className='hii'><p className='hovernav'>Contact me</p></a>
           </div>
-          <a href='/Vishal_Singh_Software__Developer.pdf' download>
+          <a href='/resume.pdf' download>
           <button className='right-nav'>
             Download Resume
           </button> 
@@ -109,7 +109,7 @@ function App() {
           </div>
           
           <img src={myimage} className='myimage' />
-          <div className='hero-details' >
+          <div className='hero-details' onMouseEnter={(event)=>cursorinc(event)}  onMouseLeave={(event)=>cursordec(event)}>
             <div  
              className='name'
             >Hello! Everyone 👋 <span>I'm Vishal Singh</span></div>
@@ -121,7 +121,7 @@ function App() {
             </div>
           </div>
     </div>
-    <Aboutme/> 
+    <Aboutme cursorref={cursorref} setCursorText={setCursorText} setIsHovered={setIsHovered}/> 
     <Project cursorref={cursorref} setCursorText={setCursorText} setIsHovered={setIsHovered}/>  
     <Skills/>
     <Contact cursorref={cursorref}/>

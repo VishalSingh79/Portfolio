@@ -104,7 +104,7 @@ function Contact({cursorref}) {
                     {...register('message', { required: "Message is required**" })}
                   />
                    <p style={{color:'red',backgroundColor:'inherit'}}>{errors.message?.message}</p>
-                  <button className='submitlabel'>Submit</button>
+                  <button className='submitlabel'>Send</button>
               </form>
            </div>
         </div>
