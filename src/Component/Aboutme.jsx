@@ -56,9 +56,8 @@ function Aboutme({cursorref,setCursorText,setIsHovered}) {
             <div className='left-about'>
                 <img src={myphoto} className='aboutphoto'/>
             </div>
-            <div className='right-about'>
-                 <p className='right-desc'
-                   onMouseEnter={(event)=>cursorinc(event)}  onMouseLeave={(event)=>cursordec(event)}
+            <div className='right-about'   onMouseEnter={(event)=>cursorinc(event)}  onMouseLeave={(event)=>cursordec(event)}>
+                 <p className='right-desc'     
                  > 
                  I'm a <span style={{color:"#14f7ff",fontWeight:"bold"}}>MERN Stack Developer</span> with expertise in MongoDB, Express.js, ReactJS, and Node.js and a solid foundation in C, C++, and Python. With strong skills in problem-solving and Data Structures & Algorithms (DSA), I create responsive, high-performance applications focused on user experience. Driven by continuous learning, I’m eager to bring innovative, impactful projects to life.</p> 
                  <div className='links'>
