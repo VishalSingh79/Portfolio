@@ -6,8 +6,6 @@ import weathersnap from '../assets/weathersnap.png';
 import birthsnap from '../assets/birthsnap.png';
 import notionacademy from '../assets/NotionHome.webp';
 import Card from './Card';
-import gsap from 'gsap';
-
 
 function Projects({cursorref,setCursorText,setIsHovered}) {
   
@@ -25,8 +23,8 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       name: "Weather App",
       info: "A Weather App with key features like geolocation integration for hyper-local updates, API handling for real-time weather data, and local/session storage management.",
       image: weathersnap,
-      link1:"https://vishalsingh79.github.io/Weather-App",
-      link2:"https://github.com/VishalSingh79/Weather-App.git"
+      link1:"https://weather-app-updated-rho.vercel.app",
+      link2:"https://github.com/VishalSingh79/Weather-App-Updated"
     },
     {
       id: 2,
