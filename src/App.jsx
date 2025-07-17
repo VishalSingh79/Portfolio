@@ -24,6 +24,7 @@ function App() {
       strings: [
         "Student",
         "Full Stack Developer",
+        "App Developer",
         "Coder",
       ],
       loop: true,
