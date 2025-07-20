@@ -8,6 +8,7 @@ import notionacademy from '../assets/NotionHome.webp';
 import Card from './Card';
 import taskify from '../assets/taskify.png';
 import vartalap from '../assets/vartalap.jpg';
+import task from "../assets/task.png";
 
 function Projects({cursorref,setCursorText,setIsHovered}) {
   
@@ -15,7 +16,7 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
     {
       id:0,
       name:"Vartalap App",
-      info:"Vartalap App is a real-time mobile messaging application enabling secure one-on-one chats and streamlined user interactions.",
+      info:"Vartalap App is a real-time mobile messaging application enabling secure one-on-one chats, instant notifications, and streamlined user interactions.",
       image:vartalap,
       link1:"https://drive.google.com/drive/folders/1Ed8G76Ey25uoJ1WPzJAh9Q-3JmKo72aM?usp=sharing",
       link2:"https://github.com/VishalSingh79/Vartalap-App",
@@ -44,6 +45,16 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
     },
     {
       id: 3,
+      name: "Task Management",
+      info: "A full-stack task management app to create, organize, and track tasks by due date, priority, and status with list and calendar views. Easily update or mark tasks complete to stay on track.",
+      image: task,
+      link1:"https://task-management-app-ebon-nine.vercel.app/",
+      link2:"https://github.com/VishalSingh79/Task-Management-App-",
+      btn1:"Live Link",
+      btn2:"GitHub Link"
+    },
+    {
+      id: 4,
       name: "Weather App",
       info: "A Weather App with key features like geolocation integration for hyper-local updates, API handling for real-time weather data, and local/session storage management.",
       image: weathersnap,
@@ -53,7 +64,7 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       btn2:"GitHub Link"
     },
     {
-      id: 4,
+      id: 5,
       name: "Todo App",
       info: `A to-do list app uses React for a dynamic experience, Redux for centralized state management, and local storage to save tasks . It's user-friendly and scalable.`,
       image: todosnap,
@@ -63,7 +74,7 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       btn2:"GitHub Link"
     },
     {
-      id: 5,
+      id: 6,
       name: "Currency Convertor",
       info: "Developed a responsive web application using React.js for real-time currency conversion across 50+ global currencies. Leveraged external APIs to provide accurate exchange rates.",
       image: currencysnap,
@@ -73,9 +84,9 @@ function Projects({cursorref,setCursorText,setIsHovered}) {
       btn2:"GitHub Link"
     },
     {
-      id: 6,
+      id: 7,
       name: "Birth Date Predictor",
-      info: "Mystery Date is a React.js game blending intuition and algorithm. Guess if your birth date appears on a uniquely patterned cube in just 5 turns. Engage in a sophisticated, interactive experience designed for curious, analytical minds.",
+      info: "Mystery Date is a React.js game blending intuition and algorithm. Guess if your birth date appears on a uniquely patterned cube in just 5 turns. Engage in a interactive experience.",
       image:birthsnap,
       link1:"https://vishalsingh79.github.io/Birth-Date-Predictor",
       link2:"https://github.com/VishalSingh79/Birth-Date-Predictor.git",
